@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="NiceWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jmR-tB-1Uo">
+                                <rect key="frame" x="35" y="260" width="320" height="324.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="Lnx-cE-04F">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="LEM-S5-61T"/>
+                                            <constraint firstAttribute="width" constant="200" id="sWN-QX-BV4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris'de Bugün Hava Harika " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK5-CZ-4me">
+                                        <rect key="frame" x="9" y="230" width="302" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-Oq-N6K">
+                                        <rect key="frame" x="121.66666666666666" y="290" width="77" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Devam" cornerStyle="dynamic">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <color key="baseForegroundColor" red="0.00038870694700000001" green="0.38357153529999999" blue="0.69193965199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="67G-Ho-7VI" kind="presentation" identifier="toHomeVC" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="zaR-Bq-VQl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Lnx-cE-04F" secondAttribute="trailing" constant="60" id="00o-i4-PNI"/>
+                                    <constraint firstItem="Lnx-cE-04F" firstAttribute="leading" secondItem="jmR-tB-1Uo" secondAttribute="leading" constant="60" id="egK-Nv-1tL"/>
+                                    <constraint firstItem="Lnx-cE-04F" firstAttribute="top" secondItem="jmR-tB-1Uo" secondAttribute="top" id="xbs-UW-6Xm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.00059033982690000002" green="0.47227561470000001" blue="0.84220880269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.00059033982690000002" green="0.47227561470000001" blue="0.84220880269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jmR-tB-1Uo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbL-Q2-MTh"/>
+                            <constraint firstItem="jmR-tB-1Uo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UHE-IK-Ric"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="niceButton" destination="rOG-Oq-N6K" id="RWz-jL-9U9"/>
+                        <outlet property="niceLabel" destination="EK5-CZ-4me" id="aao-gA-HFt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="110.49107142857143"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="oCe-pF-8Q6">
+            <objects>
+                <viewController id="67G-Ho-7VI" customClass="HomeViewController" customModule="NiceWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xca-K7-mOs">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FVo-GR-dn5">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ovm-Ti-qqh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FVo-GR-dn5" firstAttribute="leading" secondItem="ovm-Ti-qqh" secondAttribute="leading" id="0aS-Hr-M5c"/>
+                            <constraint firstItem="ovm-Ti-qqh" firstAttribute="bottom" secondItem="FVo-GR-dn5" secondAttribute="bottom" id="LuY-5V-tN3"/>
+                            <constraint firstItem="ovm-Ti-qqh" firstAttribute="trailing" secondItem="FVo-GR-dn5" secondAttribute="trailing" id="Mr3-A7-NjQ"/>
+                            <constraint firstItem="FVo-GR-dn5" firstAttribute="top" secondItem="ovm-Ti-qqh" secondAttribute="top" id="Nrp-2j-gTW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n4T-xf-YtK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="has-W0-Iiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
